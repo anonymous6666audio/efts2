@@ -1,0 +1,121 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Audio samples from "EfficientTTS 2: Variational End-to-End Text-to-Speech Synthesis and Voice Conversion"</title>
+    <meta charset="UTF-8">
+    <title>EfficientTTS: An Efficient and High-Quality Text-to-Speech Architecture</title>
+    <style>
+        red {color: red}
+        audio {width: 250px}
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Audio samples from "EfficientTTS 2: Variational End-to-End Text-to-Speech Synthesis and Voice Conversion"</h1>
+      </header>
+    </article>
+
+
+    <div>
+      <b>Abstract:</b>
+      Text-to-speech (TTS) field is recently dominated by one-stage text-to-waveform models, in which the speech quality is significantly improved compared to two-stage models. However, the current best-performing public one-stage model, the VITS, is not fully differentiable and suffers from relatively high computation costs. To address these issues, we propose EfficientTTS 2 (EFTS2), a fully differentiable end-to-end TTS framework that is highly efficient. Our method adopts an adversarial training process, with a differentiable aligner and a hierarchical-VAE-based waveform generator. The differentiable aligner is built upon previous work, the EfficientTTS. A hybrid attention mechanism and a variational alignment predictor are incorporated into our network to improve the expressive power of the aligner.  The use of a hierarchical-VAE-based waveform generator not only alleviates the one-to-many mapping problems in waveform generation but also allows the model to learn hierarchical latent variables that control different aspects of the generated speech. We also extend EFTS2 to the voice conversion (VC) task and propose EFTS2-VC, an end-to-end VC model that allows efficient and high-quality conversion. Experimental results suggest that the two proposed models match their strong counterparts in speech quality with a faster inference speed and smaller model size. 
+    <p></p>
+    </div>
+
+
+    <b>Contents:</b>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#lj">TTS on LJ Speech Dataset</a></li>
+      <li><a href="#vc">VC on VCTK Dataset</a></li>
+    </ul>
+    </div>
+
+
+    <div>
+        <a name="lj"><h2>TTS on LJ Speech Dataset</h2></a>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                <th>Ground-Truth</th><th> EFTS2 </th><th> EFTS2(1-layer-VAE)</th><th>EFTS2(single attention)</th><th>VITS</th>
+                </tr>
+              </thead>
+          <tbody>
+          <tr>
+             <td colspan="5"><span>1: especially as no more time is occupied, or cost incurred, in casting, setting, or printing beautiful letters</span></td>
+          </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_mel_lj/1.wav"></audio></td>           
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/tacotron_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/glow_tts_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/efts_cnn_lj/1.wav"></audio></td>
+          </tr>
+          <tr>
+              <td colspan="5"><span>2: than in the same operations with ugly ones.</span></td>
+           </tr>
+           <tr>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/2.wav"></audio></td>          
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/2.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/2.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="5"><span>3: And it was a matter of course that in the Middle Ages, when the craftsmen took care that beautiful form should always be a part of their productions whatever they were,</span></td>
+         </tr>
+         <tr>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/3.wav"></audio></td>
+         
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/3.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td colspan="5"><span>4: produced the block books, which were the immediate predecessors of the true printed book,</span></td>
+       </tr>
+       <tr>
+        <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/4.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/4.wav"></audio></td>
+       
+        <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/4.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/4.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/4.wav"></audio></td>
+      </tr>
+          </tbody>
+        </table>
+
+        <hr>
+
+      </div>
+    <br><br>
+    <div>
+      <a name="dv"><h2>VC on VCTK Dataset</h2></a>
+      <hr>
+      <table>
+          <thead>
+              <tr>
+              <th> Source Wav </th><th> Target Wav</th><th>  Conversion </th>
+              </tr>
+            </thead>
+        <tbody>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+        </tr>
+         <tr>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/lj/testset/gt_lj/1.wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div>
+    <br><br>
+</body></html>
